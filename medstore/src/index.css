@@ -1,0 +1,17 @@
+/* Import New Google Fonts */
+/* Import Lexend Deca Google Font */
+/* Import Lexend Deca Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&display=swap');
+
+/* General Styles */
+*{
+  font-family: 'Lexend Deca', sans-serif; 
+  font-weight: 400;
+}
+body {
+  margin: 0;
+  background-color: #f4f8fb;
+  color: #333;
+}
+
+
