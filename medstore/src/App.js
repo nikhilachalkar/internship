@@ -25,8 +25,10 @@
 // export default App;
 // src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from
+ 'react-router-dom';
 import LandingPage from './components/LandingPage';
+import HomePage from './components/HomePage';
 // import StockManagement from './components/StockManagement';
 // import OrderManagement from './components/OrderManagement';
 // import SalesMonitoring from './components/SalesMonitoring';
@@ -38,6 +40,8 @@ function App() {
       <div >
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/home" element={<HomePage />} />
+
 
         </Routes>
       </div>
