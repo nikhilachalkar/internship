@@ -1,18 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/HomePage.css'; // Make sure to create this CSS file or add styles in your global CSS
-
+import "../styles/LandingPage.css";
 function HomePage() {
   return (
     <div className="dashboard">
 
       {/* Navbar */}
       <nav className="navbar">
-        <div className="logo">Swami Pharma Trader</div>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-        </ul>
-      </nav>
+  <div className="logo">Swami Pharma Trader</div>
+
+  <ul className="navbar-menu">
+    <li><Link to="/">Home</Link></li>
+  </ul>
+</nav>
+
 
       {/* User Panel Heading */}
       <div className="user-panel-heading">
@@ -36,7 +38,7 @@ function HomePage() {
             <h3>Order Management</h3>
             <p>Streamline order processing, track deliveries, and manage supplier relationships.</p>
             <Link to="/order-management">
-              <button>Manage Orders</button>
+              <button  >Manage Orders</button>
             </Link>
           </div>
           <div className="feature">

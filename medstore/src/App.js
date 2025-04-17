@@ -1,47 +1,35 @@
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
-// src/App.js
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from
- 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
 import HomePage from './components/HomePage';
-// import StockManagement from './components/StockManagement';
 // import OrderManagement from './components/OrderManagement';
-// import SalesMonitoring from './components/SalesMonitoring';
-// import ReportGeneration from './components/ReportGeneration';
-
 function App() {
+  useEffect(() => {
+    // Load Botpress Webchat script
+    const script = document.createElement('script');
+    script.src = 'https://cdn.botpress.cloud/webchat/v2.3/inject.js';
+    script.async = true;
+
+    script.onload = () => {
+      // Load the Botpress configuration
+      const configScript = document.createElement('script');
+      configScript.src = 'https://files.bpcontent.cloud/2025/04/17/06/20250417065927-XGXMDZ5X.js';
+      configScript.async = true;
+      document.body.appendChild(configScript);
+    };
+
+    document.body.appendChild(script);
+  }, []);
+
   return (
     <Router>
-      <div >
+      <div>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/home" element={<HomePage />} />
 
+
+          {/* <Route path="/order-management" element={<OrderManagement />} /> */}
 
         </Routes>
       </div>
