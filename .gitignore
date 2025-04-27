@@ -1,1 +1,4 @@
-medstore/node_modules
+medstore/node_modules/
+backend/.env
+backend/node_modules/
+backend/clean_medical_stock.js
