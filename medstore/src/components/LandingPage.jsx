@@ -31,16 +31,28 @@ const [password, setPassword] = useState('');
     <div>
       {/* Navbar */}
       <nav className="navbar">
-        <div className="logo">Swami Pharma Trader</div>
-        
-        <ul >
+  <div className="logo">Swami Pharma Trader</div>
+
+  {/* Hamburger Icon */}
+  <button className="menu-toggle" onClick={() => {
+    const menu = document.querySelector('.navbar-menu');
+    menu.classList.toggle('active');
+  }}>
+    <span className="bar"></span>
+    <span className="bar"></span>
+    <span className="bar"></span>
+  </button>
+
+  {/* Links that collapse */}
+  <ul className="navbar-menu">
     <li><Link to="/">Home</Link></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><button onClick={() => setShowLogin(true)}>Login</button></li>
     <li><button onClick={() => setShowRegister(true)}>Register</button></li>
   </ul>
-      </nav>
+</nav>
+
 
       {/* Banner */}
       <div className="banner">
