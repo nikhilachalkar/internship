@@ -9,11 +9,11 @@ const Data = require('../models/data.js');
 
 const router = express.Router();
 
-router.post('/getalldata',verifyToken, async (req, res) => {
+router.get('/getalldata', async (req, res) => {
   
     try
     {
-    const data =await Data.find();
+    const data =await Data.find({});
     res.status(200).json(data); 
     }
     catch(error)
