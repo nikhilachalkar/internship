@@ -2,7 +2,9 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
 import HomePage from './components/HomePage';
-// import OrderManagement from './components/OrderManagement';
+import OrderManagement from './components/user/OrderManagement';
+import PaymentPage from './components/user/PaymentPage';
+import StockManagement from './components/admin/AdminStockManagement';
 function App() {
   useEffect(() => {
     // Load Botpress Webchat script
@@ -28,9 +30,9 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/home" element={<HomePage />} />
 
-
-          {/* <Route path="/order-management" element={<OrderManagement />} /> */}
-
+          <Route path='/stock-management'element={<StockManagement/>}/>
+          <Route path="/order-management" element={<OrderManagement />} />
+          <Route path="payment" element={<PaymentPage/>}/>
         </Routes>
       </div>
     </Router>

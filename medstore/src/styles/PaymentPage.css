@@ -1,0 +1,200 @@
+/* PaymentPage.css */
+
+.payment-page {
+    padding: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .payment-page h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #343a40;
+  }
+  
+  .payment-options-container {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  .payment-options-container h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #343a40;
+    text-align: center;
+  }
+  
+  .payment-option {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  }
+  
+  .payment-option:hover,
+  .payment-option.selected {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+    border-color: #007bff;
+  }
+  
+  .payment-option-header {
+    background-color: #f8f9fa;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    color: #495057;
+  }
+  
+  .payment-option-header .icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+  }
+  
+  .payment-option-details {
+    padding: 15px;
+    background-color: #fff;
+  }
+  
+  .payment-option-details p {
+    color: #6c757d;
+    margin-bottom: 10px;
+  }
+  
+  .payment-option-details form div {
+    margin-bottom: 15px;
+  }
+  
+  .payment-option-details label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #343a40;
+  }
+  
+  .payment-option-details input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .payment-option-details input[type="text"]:focus {
+    border-color: #007bff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .payment-option-details button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.15s ease-in-out;
+    width: 100%;
+    outline: none;
+  }
+  
+  .payment-option-details button:hover {
+    background-color: #0056b3;
+  }
+  
+  .payment-option-details button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+  }
+  
+  .order-summary-container {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  .order-summary-container h4 {
+    color: #007bff;
+    margin-bottom: 15px;
+  }
+  
+  .order-summary-container ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .order-summary-container li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #495057;
+  }
+  
+  .order-summary-container li:last-child {
+    border-bottom: none;
+  }
+  
+  .order-summary-container li strong {
+    font-weight: bold;
+  }
+  
+  .order-summary-container .total-amount {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 20px;
+    text-align: right;
+  }
+  
+  .payment-page .pay-now-button {
+    background-color: #28a745;
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.15s ease-in-out;
+    width: 80%;
+    max-width: 600px;
+    outline: none;
+    margin-top: 20px;
+  }
+  
+  .payment-page .pay-now-button:hover {
+    background-color: #1e7e34;
+  }
+  
+  .payment-page .pay-now-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .payment-options-container,
+    .order-summary-container,
+    .payment-page .pay-now-button {
+      width: 95%;
+    }
+  }

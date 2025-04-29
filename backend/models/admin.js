@@ -6,7 +6,7 @@ const adminSchema = new mongoose.Schema({
   Mobile: Number,
   UniqueID: String,
   password: String,
-  role:String
+  Role:String
 });
 
 

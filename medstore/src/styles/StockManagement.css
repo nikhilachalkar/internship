@@ -1,0 +1,189 @@
+/* StockManagement.css */
+
+.stock-management-container {
+    padding: 20px;
+  }
+  
+
+  
+  .add-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .add-button svg {
+    margin-right: 5px;
+  }
+  
+  h2 {
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .controls-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+  
+  .search-icon {
+    margin-right: 8px;
+    color: #777;
+  }
+  
+  .search-bar input[type="text"] {
+    border: none;
+    padding: 8px;
+    width: 250px;
+    outline: none;
+  }
+  
+  .filters {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .filters label {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .filters select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  thead th {
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+    cursor: pointer;
+  }
+  
+  tbody tr {
+    border-bottom: 1px solid #eee;
+  }
+  
+  tbody tr:last-child {
+    border-bottom: none;
+  }
+  
+  tbody td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .actions-column {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .edit-button,
+  .delete-button {
+    background-color: #007bff; /* Blue for edit */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .delete-button {
+    background-color: #dc3545; /* Red for delete */
+  }
+  
+  .edit-button svg,
+  .delete-button svg {
+    margin-right: 5px;
+  }
+  
+  .low-stock {
+    background-color: #ffe0b2; /* Light orange for low stock */
+    color: #8a6d3b;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .controls-container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .search-bar input[type="text"] {
+      width: 100%;
+    }
+  
+    .filters {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .filters select {
+      width: 100%;
+    }
+  
+    table thead {
+      display: none; /* Hide table headers on small screens */
+    }
+  
+    table tbody td {
+      display: block;
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+    }
+  
+    table tbody td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      padding-left: 10px;
+      font-weight: bold;
+      text-align: left;
+    }
+  
+    .actions-column {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }

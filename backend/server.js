@@ -13,7 +13,7 @@ const bodyParser = require("body-parser");
 
 const app = express();
 const PORT = 3000;
-const medicalStockData= require('./stock').default;
+// const medicalStockData= require('./stock').default;
 // Middleware
 //app.use(cors());
 app.use(bodyParser.json());

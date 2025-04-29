@@ -7,7 +7,9 @@ const UserSchema = new mongoose.Schema({
   ShopID: String,
   Branch: String,
   password: String,
-  Address:String
+  Address:String,
+  Role:String
+
 });
 
 module.exports = mongoose.model('User', UserSchema);
