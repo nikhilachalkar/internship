@@ -10,4 +10,97 @@
     width: 40px;
     height: 40px;
   }
-  
+  /* HomePage.css or a separate CSS file */
+.user-confirmation-section {
+  display: flex;
+  align-items: center;
+  margin: 10px; /* Reduced margin */
+  padding: 10px 15px; /* Reduced vertical padding */
+  background-color: #f9f9f9;
+  border-radius: 25px; /* Increased border-radius for rounded shape */
+  border: 1px solid #eee;
+  width: fit-content; /* Adjust width to content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Optional subtle shadow */
+}
+
+.profile-symbol-container {
+  width: 35px; /* Smaller container */
+  height: 35px; /* Smaller container */
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px; /* Reduced right margin */
+  border: 1px solid #ddd; /* Thinner border */
+  background-color: #e0f7fa; /* Light teal background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em; /* Smaller icon size */
+  color: #00acc1; /* Teal icon color */
+}
+
+.profile-symbol {
+  /* Optional: any specific styling for the icon itself */
+}
+
+.branch-info {
+  font-size: 0.9em; /* Smaller font size for text */
+  color: #555;
+  margin: 0;
+}
+
+.branch-info strong {
+  color: #007bff; /* Example primary color */
+}
+/*admin home pandel
+/* AdminHomePage.css or your main CSS */
+.admin-confirmation-section {
+  display: flex;
+  align-items: center;
+  margin: 10px; /* Align left */
+  padding: 10px 15px;
+  background-color: #fdecea; /* Different background color for admin */
+  border-radius: 25px;
+  border: 1px solid #f1aeb5; /* Different border color for admin */
+  width: fit-content;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.admin-symbol-container {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+  border: 1px solid #e57373; /* Different border color for admin icon */
+  background-color: #ffcdd2; /* Different background color for admin icon */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  color: #d32f2f; /* Different icon color for admin */
+}
+
+.admin-symbol {
+  /* Optional: specific styling for the admin icon */
+}
+
+.admin-info {
+  font-size: 0.9em;
+  color: #333;
+  margin: 0;
+}
+
+.admin-info h2 {
+  font-size: 1.1em;
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #d32f2f; /* Different heading color for admin */
+}
+
+.admin-info p {
+  margin-bottom: 0;
+}
+
+.admin-info strong {
+  color: #c62828; /* Different strong color for admin */
+}

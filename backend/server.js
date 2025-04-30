@@ -22,7 +22,7 @@ app.get("/load-medicines", async (req, res) => {
   data.insertMany(medicalStockData);
 });
 
-app.use('/auth', authRoutes);
+app.use('/auth/', authRoutes);
 app.use('/api/',getalldata);
 (async () => {
   await connectDB();

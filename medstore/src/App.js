@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
-import HomePage from './components/HomePage';
-import OrderManagement from './components/user/OrderManagement';
+import AdminHomePage from './components/admin/AdminHomePage';
+import UserHomePage from './components/user/UserHomePage';
+import UserOrderManagement from './components/user/UserOrderManagement';
+import AdminOrderManagement from './components/admin/AdminOrderManagement';
 import PaymentPage from './components/user/PaymentPage';
 import StockManagement from './components/admin/AdminStockManagement';
 function App() {
@@ -28,10 +30,13 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/home" element={<HomePage />} />
+          <Route path="/admin-home" element={<AdminHomePage />} />
+          <Route path="/user-home" element={<UserHomePage />} />
 
           <Route path='/stock-management'element={<StockManagement/>}/>
-          <Route path="/order-management" element={<OrderManagement />} />
+          <Route path="/admin-order-management" element={<AdminOrderManagement />} />
+          <Route path="/user-order-management" element={<UserOrderManagement />} />
+
           <Route path="payment" element={<PaymentPage/>}/>
         </Routes>
       </div>
